@@ -12,6 +12,7 @@ Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
 Plug 'nvim-telescope/telescope-fzf-native.nvim', {
 \  'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build'
 \}
+Plug 'nvim-telescope/telescope-live-grep-args.nvim', { 'tag': 'v1.0.0' }
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-tree/nvim-web-devicons'  " for coloured icons
 Plug 'nvim-lualine/lualine.nvim'
@@ -195,6 +196,10 @@ endfunction
 
 " Files and Buffers with FZF:
 
+runtime ./redir.vim
+command! -nargs=1 -complete=command -bar -range Redir silent call RunCmdAndShowInScratch(<q-args>, <range>, <line1>, <line2>)
+
+" search for selected text with * or #
 runtime ./visual-star-search.vim
 
 function! s:DiffWithSaved()
