@@ -4,6 +4,8 @@ opt.tabstop = 2
 opt.expandtab = true
 opt.shiftwidth = 2
 opt.hlsearch = true
+-- Stop searches at the end/start of the file instead of wrapping around
+opt.wrapscan = false
 opt.number = true
 opt.directory = vim.fn.expand("~/.vim/swap-files/")
 opt.wildmode = { "longest", "list", "full" }
