@@ -19,6 +19,7 @@ require("nvim-treesitter").install({
   "query",
   "regex",
   "rust",
+  "tablegen",
   "toml",
   "vim",
   "vimdoc",
