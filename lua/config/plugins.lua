@@ -16,7 +16,7 @@ vim.pack.add({
   "https://github.com/nvim-lua/plenary.nvim",
 
   -- Fuzzy finder
-  { src = "https://github.com/nvim-telescope/telescope.nvim", version = "0.1.x" },
+  { src = "https://github.com/nvim-telescope/telescope.nvim", version = vim.version.range("0.2") },
   "https://github.com/nvim-telescope/telescope-fzf-native.nvim",
   { src = "https://github.com/nvim-telescope/telescope-live-grep-args.nvim", version = "v1.0.0" },
 
